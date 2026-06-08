@@ -20,7 +20,7 @@ const commandHandlers = new Collection(
 );
 
 client.once(Events.ClientReady, (readyClient) => {
-  readyClient.user.setActivity('/help', {
+  readyClient.user.setActivity(`/help | ${commands.length} commands`, {
     type: ActivityType.Listening,
   });
 

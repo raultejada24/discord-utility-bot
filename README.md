@@ -13,7 +13,8 @@ A simple Discord bot with English slash commands for server information and ever
 2. Open the **Bot** page, create the bot and copy its token.
 3. Invite it with the `bot` and `applications.commands` scopes.
 4. Give it **View Channels**, **Send Messages** and **Embed Links** permissions.
-5. Copy `.env.example` to `.env` and add your values.
+5. Add **Manage Messages** only if you want to use `/clear`.
+6. Copy `.env.example` to `.env` and add your values.
 
 ```env
 DISCORD_TOKEN=your-bot-token
@@ -40,11 +41,37 @@ npm start
 
 ## Commands
 
-- `/help` lists available commands.
-- `/ping` checks the bot latency.
-- `/server` shows server information.
-- `/user` shows Discord account information.
+### Information
+
+- `/help` lists every available command.
+- `/ping` checks response and gateway latency.
+- `/server` shows server details.
+- `/user` shows account and membership details.
+- `/avatar` displays a full-size user avatar.
+- `/role` shows role information.
+- `/channel` shows channel information.
+- `/botinfo` shows bot runtime and version details.
+
+### Fun
+
 - `/roll` rolls a configurable die.
-- `/echo` repeats a message without creating mentions.
+- `/coinflip` flips a coin.
+- `/choose` selects from a comma-separated list.
+- `/random` generates a number inside a range.
+- `/eightball` answers a yes-or-no question.
+
+### Utilities
+
+- `/echo` repeats text without creating mentions.
+- `/calculate` performs basic arithmetic.
+- `/temperature` converts Celsius, Fahrenheit and Kelvin.
+- `/color` previews a HEX color.
+- `/password` privately generates a random password.
+- `/timestamp` creates Discord timestamp markup.
+- `/snowflake` decodes the creation time of a Discord ID.
+
+### Moderation
+
+- `/clear` deletes up to 100 recent messages and requires **Manage Messages**.
 
 Never commit your `.env` file or share your bot token.
